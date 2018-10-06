@@ -4,13 +4,10 @@ import com.unity3d.player.*;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 
 public class UnityPlayerActivity extends Activity
 {
@@ -19,12 +16,13 @@ public class UnityPlayerActivity extends Activity
     // Setup activity layout
     @Override protected void onCreate(Bundle savedInstanceState)
     {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_unity_player);
         super.onCreate(savedInstanceState);
 
         mUnityPlayer = new UnityPlayer(this);
-        setContentView(mUnityPlayer);
-        mUnityPlayer.requestFocus();
+        //setContentView(mUnityPlayer);
+        //mUnityPlayer.requestFocus();
     }
 
     @Override protected void onNewIntent(Intent intent)
