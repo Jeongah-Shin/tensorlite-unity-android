@@ -19,7 +19,7 @@
         android:screenOrientation="fullSensor"
         android:launchMode="singleTask"
         android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-        android:hardwareAccelerated="false"
+        android:hardwareAccelerated="true"
         android:name=".UnityPlayerActivity">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />

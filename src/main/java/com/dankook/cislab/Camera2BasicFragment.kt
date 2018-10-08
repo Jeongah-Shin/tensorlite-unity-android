@@ -453,6 +453,7 @@ class Camera2BasicFragment : Fragment(), FragmentCompat.OnRequestPermissionsResu
     val manager = activity.getSystemService(Context.CAMERA_SERVICE) as CameraManager
     try {
       if (!cameraOpenCloseLock.tryAcquire(2500, TimeUnit.MILLISECONDS)) {
+        Log.d("cameraOpenCloseLock","tryAcquire denied")
         throw RuntimeException("Time out waiting to lock camera opening.")
       }
       Log.d("cameraId", cameraId)
